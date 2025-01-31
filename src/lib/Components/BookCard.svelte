@@ -43,7 +43,7 @@
 
 <div class="grid grid-cols-4 gap-4 mx-auto max-w-screen-lg">
     {#each books as book}
-        <a href={`/books/details/${book.uuid}`} class="block w-full">
+        <a href={`/book/humanitys-rebirth`} class="block w-full">
             <div class="relative flex flex-col gap-1 hover:shadow-md justify-start h-full bg-blue-10 rounded-md shadow-lg border border-gray-100 w-full">
                 <div class="h-48 overflow-hidden p-3 pb-0">
                     <img
@@ -56,7 +56,7 @@
                 <div class="m-4 flex flex-col gap-2">
                     <span class="text-xs capitalize">{book.category}</span>
                     <span>
-                        <a href={`/books/details/${book.uuid}`} class="text-white flex items-start justify-start" title="View book details">
+                        <a href={`/book/humanitys-rebirth`} class="text-white flex items-start justify-start" title="View book details">
                             <GoogleMatrialIcon iconName="arrow_forward" styleType="sharp" addClass={'text-base h-6 w-6 bg-secondary rounded-full flex items-center justify-center -rotate-45'} />
                         </a>
                     </span>
