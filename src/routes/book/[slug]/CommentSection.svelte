@@ -62,7 +62,7 @@
   
     <div class="border border-gray-200 rounded-xl overflow-hidden">
       <div class="p-4">
-        <textarea placeholder="Discuss this story..." class="w-full min-h-[100px] p-3 border border-gray-200 rounded-lg bg-gray-50 text-sm resize-y focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        <textarea placeholder="Discuss this story..." class="w-full min-h-[100px] p-3 border border-gray-200 rounded-lg bg-gray-25 text-sm resize-y focus:outline-none focus:ring-2 focus:ring-blue-500" />
         <div class="flex justify-between items-center mt-4">
           <p class="text-sm text-gray-500">
             You must <a href="#" class="text-blue-500 font-medium">sign up</a> or
