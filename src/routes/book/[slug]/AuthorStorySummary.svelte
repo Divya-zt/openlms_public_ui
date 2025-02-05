@@ -31,126 +31,33 @@
     }
 </script>
 
-<div class="author-container">
-    <div class="author-info">
-        <img src={author.profilePic} alt="Author profile" class="author-pic" />
-        <div class="author-details">
-            <h2 class="author-name">
+<div class="max-w-2xl mx-auto font-sans">
+    <div class="flex items-center gap-3">
+        <img src={author.profilePic} alt="Author profile" class="w-12 h-12 rounded-full" />
+        <div>
+            <h2 class="text-lg font-bold flex items-center gap-3">
                 {author.name} 
-                <button class="follow-btn" on:click={toggleFollow}>
+                <button class="px-3 py-1 text-sm font-bold uppercase text-sky-400 border-2 border-sky-400 rounded-full bg-white transition-all hover:bg-sky-400 hover:text-white" on:click={toggleFollow}>
                     {isFollowing ? 'FOLLOWING' : 'FOLLOW'}
                 </button>
             </h2>
         </div>
     </div>
     
-    <div class="stats">
-        <span class="like-count">👍 {author.likes} likes</span>
-        <span class="comment-count">💬 {author.comments} comments</span>
+    <div class="text-gray-600 text-sm mt-2 flex gap-4">
+        <span class="font-bold flex items-center gap-1">👍 {author.likes} likes</span>
+        <span class="font-bold flex items-center gap-1">💬 {author.comments} comments</span>
     </div>
 
-    <div class="genre-tag">{author.genre}</div>
-    <div class="genre-tag">{author.genre}</div>
+    <div class="inline-block bg-gray-300 px-3 py-1 rounded-md text-xs font-bold mt-2">{author.genre}</div>
 
     {#if author.containsSensitiveContent}
-        <div class="sensitive-warning">This story contains sensitive content</div>
+        <div class="bg-white text-gray-800 p-3 border border-gray-400 rounded-md text-center font-bold mt-4">
+            This story contains sensitive content
+        </div>
     {/if}
 
-    <div class="story-summary">
+    <div class="mt-5 text-lg leading-relaxed">
         <p>{story.summary}</p>
     </div>
 </div>
-
-<style>
-    .author-container {
-        max-width: 800px;
-        margin: auto;
-        font-family: Arial, sans-serif;
-    }
-
-    .author-info {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .author-pic {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-    }
-
-    .author-details {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .author-name {
-        font-size: 1.3rem;
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .follow-btn {
-        padding: 3px 9px;
-        font-size: 0.8rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        color: #87CEEB;
-        border: 2px solid #87CEEB;
-        border-radius: 15px;
-        background: white;
-        cursor: pointer;
-        transition: all 0.3s ease-in-out;
-    }
-
-    .follow-btn:hover {
-        background: #87CEEB;
-        color: white;
-    }
-
-    .stats {
-        color: gray;
-        font-size: 0.9rem;
-        margin-top: 5px;
-        display: flex;
-        gap: 15px;
-    }
-
-    .like-count, .comment-count {
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-        gap: 5px;
-    }
-
-    .genre-tag {
-        display: inline-block;
-        background: #d3d3d3;
-        padding: 4px 10px;
-        border-radius: 10px;
-        font-size: 0.8rem;
-        font-weight: bold;
-        margin-top: 5px;
-    }
-
-    .sensitive-warning {
-        background: white;
-        color: rgb(42, 42, 42);
-        padding: 10px;
-        border-radius: 5px;
-        text-align: center;
-        font-weight: bold;
-        margin-top: 10px;
-        border: 1px solid gray;
-    }
-
-    .story-summary {
-        margin-top: 20px;
-        font-size: 1.1rem;
-        line-height: 1.6;
-    }
-</style>
